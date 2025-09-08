@@ -1,3 +1,16 @@
+## Hierarchical (Agglomerative) Clustering
+
+Hierarchical clustering is another clustering technique where:  
+- Each data point starts as its own cluster.  
+- In each iteration, the closest clusters merge together.  
+- This merging process continues until all points are clustered into a hierarchy, which can be visualized with a dendrogram.
+
+**Key Points:**  
+- The dendrogram helps decide the number of logical clusters by choosing where to cut the tree.  
+- It can reveal sub-clusters within clusters.  
+- However, it's computationally expensive for large datasets.
+
+
 ## Linkage Methods in Agglomerative Clustering
 
 | Linkage Type  | Definition                                                                 | When to Use It                                   |
