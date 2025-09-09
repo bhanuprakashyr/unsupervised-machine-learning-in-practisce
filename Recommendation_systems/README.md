@@ -22,3 +22,13 @@ Recommendation systems are algorithms designed to suggest relevant items to user
 ## 4. Hybrid Systems
 - **Approach**: Combines multiple techniques (e.g., collaborative + content-based) to enhance accuracy and overcome individual limitations.
 - **Benefits**: Better overall performance, reduced cold start issues, and more robust recommendations.
+
+
+# 📊 Recommendation System Approaches
+
+| Type                  | How It Works                                      | Typical Implementation                         | Libraries / Functions |
+|-----------------------|---------------------------------------------------|-----------------------------------------------|-----------------------|
+| **Popularity-Based**  | Recommend top-N most popular items overall.        | Simple `groupby` + count or mean rating.       | pandas (`groupby`, `sort_values`) |
+| **Content-Based**     | Recommend items similar to those the user liked, based on attributes/features. | Build item feature vectors → compute similarity → KNN search. | scikit-learn (`NearestNeighbors`), cosine similarity |
+| **Collaborative Filtering** | Recommend based on user–item interactions (latent factors). | Matrix factorization: SVD, SVD++ (user/item embeddings). | Surprise (`SVD`, `SVD++`), ALS (implicit library) |
+| **Hybrid**            | Combine multiple approaches for better accuracy.  | Popularity + Content + Collaborative in ensemble or weighted scheme. | Custom pipeline, hybrid logic |
